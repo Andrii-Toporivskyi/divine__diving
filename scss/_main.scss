@@ -1,0 +1,275 @@
+// Write your styles here
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+  }
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  .column {
+    flex-flow: column;
+  }
+  
+  .row {
+    flex-flow: row;
+  }
+  
+  .title {
+    font-size: 25px;
+    font-weight: 600;
+    color: $blackColor;
+    text-transform: uppercase;
+    text-align: right;
+  }
+  
+  .subtitle {
+    @extend .title;
+    font-size: 16px;
+  }
+  
+  p {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: $blackColor;
+  }
+  
+  .btn {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    font-size: 15px;
+    background: $blueGreenColor;
+    color: $whiteColor;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 20px;
+    margin-left: auto;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: $darkBlueColor;
+      @extend .animate;
+    }
+  }
+  
+  .animate {
+    -webkit-transition: 0.4s Ease;
+    -moz-transition: 0.4s Ease;
+    -o-transition: 0.4s Ease;
+    transition: 0.4s Ease;
+  }
+  
+  .mt-60 {
+    margin-top: 60px;
+  }
+  
+  .form-control {
+    padding: 0.9rem 0.7rem;
+    background: $whiteColor;
+    border: 1px solid $darkBlueColor;
+  }
+  
+  /** Header **/
+  
+  /** End Header **/
+  
+  .header {
+    background: url(../img/header_background_v1.jpg) center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 0 10px;
+    position: relative;
+  
+    display: flex;
+    flex-direction: column;
+  
+    .top-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  
+      .logo img {
+        width: 220px;
+      }
+    }
+  
+    nav {
+      display: flex;
+      flex-direction: row;
+  
+      a {
+        align-self: baseline;
+        font-weight: 600;
+        color: $whiteColor;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 10px 110px;
+        border-left: 2px solid $darkBlueColor;
+  
+        &:first-of-type {
+          border: none;
+        }
+  
+        &:hover {
+          color: $blueGreenColor;
+          @extend .animate;
+        }
+      }
+    }
+  
+    section {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+  
+      .title {
+        color: $whiteColor;
+        text-align: center;
+      }
+  
+      .btn-top {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        margin: 10px auto 0 auto;
+      }
+    }
+  }
+  
+  /** Toolbar **/
+  
+  .toolbar {
+    text-align: right;
+    margin: 15px 10px 15px 0;
+  
+    .form-control {
+      padding: 10px 20px;
+    }
+  }
+  
+  /** End Toolbar **/
+  
+  /** Post List **/
+  
+  .post-list {
+    article {
+      background: $greyColor;
+      padding: 10px;
+      margin-bottom: 20px;
+  
+      img {
+        width: 280px;
+      }
+  
+      & > div {
+        margin-left: 10px;
+      }
+  
+      &:last-child {
+        margin-bottom: 0px;
+      }
+  
+      .btn {
+        float: right;
+        margin-right: 10px;
+      }
+    }
+  
+    .post {
+      .post-description {
+        color: $redColor;
+        font-size: 12px;
+        border-bottom: 1px solid $darkBlueColor;
+        padding: 10px 0;
+        margin-bottom: 5px;
+      }
+  
+      h3 {
+        color: $blueGreenColor;
+        font-size: 19px;
+        text-transform: uppercase;
+      }
+  
+      p {
+        line-height: 24px;
+      }
+    }
+  }
+  
+  /** End Post List **/
+  
+  /** About **/
+  
+  .about {
+    p {
+      margin-bottom: 24px;
+    }
+  }
+  
+  /** End About **/
+  
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  /** Contact **/
+  
+  .form-container {
+    & > div:first-of-type {
+      margin-right: 10px;
+    }
+  
+    .form-group {
+      flex: 1 1 460px;
+    }
+  }
+  
+  .form-group {
+    margin-top: 20px;
+    @extend .d-flex, .column;
+  
+    &.required {
+      label:after {
+        content: "*";
+        padding-left: 5px;
+      }
+    }
+  
+    label {
+      font-weight: 400;
+      color: $blueGreenColor;
+      text-align: right;
+      margin-bottom: 0.2rem;
+    }
+  
+    textarea.form-control {
+      min-width: calc(100% - 1.4rem);
+      max-width: calc(100% - 1.4rem);
+    }
+  }
+  
+  .form-btn {
+    @extend .btn;
+  }
+  
+  /** Contact **/
+  
+  /** Footer **/
+  
+  footer {
+    margin: 15px;
+  
+    span {
+      font-size: 13px;
+      color: $blackColor;
+    }
+  }
